@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কমিটি - KYBDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Poppins','Noto Sans Bengali',sans-serif;background:#f0f2f5;}
+        .container{max-width:1250px;margin:auto;padding:0 20px;}
+        
+        /* হেডার ও মেনুবার (একই) */
+        .main-header{background:linear-gradient(135deg,#c62828,#1b5e20);padding:18px 0;}
+        .header-flex{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+        .brand-section{display:flex;align-items:center;gap:18px;}
+        .logo-box img{width:75px;height:75px;border-radius:50%;background:white;border:3px solid white;}
+        .brand-text h1{color:white;font-size:1.7rem;}
+        .brand-text p{color:#f5f5f5;font-size:0.85rem;}
+        .header-right{display:flex;align-items:center;gap:15px;}
+        .lang-btn{background:white;color:#1b5e20;padding:10px 18px;border-radius:40px;border:none;font-weight:700;}
+        .header-icons a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.15);color:white;display:flex;align-items:center;justify-content:center;text-decoration:none;}
+        .navbar{background:#145214;position:sticky;top:0;}
+        .nav-flex{display:flex;justify-content:space-between;align-items:center;padding:12px 0;}
+        .nav-menu{list-style:none;display:flex;gap:8px;flex-wrap:wrap;}
+        .nav-menu a{text-decoration:none;color:white;font-size:0.9rem;font-weight:600;padding:10px 18px;border-radius:40px;}
+        .nav-menu a:hover,.nav-menu .active{background:#c62828;}
+        .hamburger{display:none;font-size:28px;color:white;cursor:pointer;}
+        
+        /* ইউনিক ডিজাইন (কমিটি) */
+        .committee-header{background:#1b5e20;padding:50px 0;text-align:center;color:white;}
+        .committee-header h1{font-size:2.5rem;}
+        .committee-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin:50px 0;}
+        .committee-card{background:white;border-radius:30px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.08);transition:0.3s;}
+        .committee-card:hover{transform:translateY(-5px);}
+        .card-header{background:linear-gradient(135deg,#c62828,#e05555);color:white;padding:20px;text-align:center;}
+        .card-header i{font-size:2.5rem;}
+        .card-body{padding:25px;}
+        .card-body h3{color:#1b5e20;margin-bottom:10px;}
+        .card-body p{margin:8px 0;color:#555;}
+        .badge{background:#e8f0e8;color:#1b5e20;padding:5px 12px;border-radius:20px;font-size:0.8rem;display:inline-block;}
+        
+        .advisory-section{background:#fff9e8;padding:40px;border-radius:40px;margin:40px 0;text-align:center;}
+        
+        .footer{background:#0e2a0e;color:#d4e8d4;padding:50px 0 25px;margin-top:50px;border-radius:40px 40px 0 0;}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:35px;}
+        .footer h4{color:#ffcd4a;}
+        .copyright{text-align:center;padding-top:20px;border-top:1px solid #2a5a2a;margin-top:30px;}
+        
+        @media (max-width:768px){
+            .brand-text h1{font-size:1.2rem;}
+            .logo-box img{width:55px;height:55px;}
+            .hamburger{display:block;}
+            .nav-menu{display:none;flex-direction:column;width:100%;}
+            .nav-menu.show{display:flex;}
+            .committee-header h1{font-size:1.8rem;}
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header"><div class="container header-flex"><div class="brand-section"><div class="logo-box"><img src="images/logo.png" alt="Logo"></div><div class="brand-text"><h1>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1><p>Kalmakanda Youth Blood Donate Foundation (KYBDF)</p></div></div><div class="header-right"><button class="lang-btn"><i class="fas fa-language"></i> বাংলা | English</button><div class="header-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fas fa-search"></i></a></div></div></div></header>
+
+<nav class="navbar"><div class="container nav-flex"><div class="hamburger"><i class="fas fa-bars"></i></div><ul class="nav-menu"><li><a href="index.html">হোম</a></li><li><a href="about.html">আমাদের সম্পর্কে</a></li><li><a href="goals.html">লক্ষ্য ও উদ্দেশ্য</a></li><li><a href="committee.html" class="active">কমিটি</a></li><li><a href="member-form.html">সদস্য ফরম</a></li><li><a href="blood-section.html">রক্তদান</a></li><li><a href="notice-board.html">নোটিশ</a></li><li><a href="gallery.html">গ্যালারি</a></li><li><a href="contact.html">যোগাযোগ</a></li><li><a href="donation.html">ডোনেশন</a></li><li><a href="admin.html">অ্যাডমিন</a></li></ul></div></nav>
+
+<div class="committee-header"><div class="container"><h1><i class="fas fa-users"></i> সংগঠনের কমিটি</h1><p>আমাদের নেতৃত্ব ও পরিচালনা পরিষদ</p></div></div>
+
+<div class="container">
+    <div class="committee-grid">
+        <div class="committee-card"><div class="card-header"><i class="fas fa-user-tie"></i><h3>নিৰ্বাহী পরিচালক</h3></div><div class="card-body"><h3>তানভীর রহমান শিশির</h3><p><span class="badge">প্রধান প্রতিষ্ঠাতা</span></p><p>সাংগঠনিক প্রধান ও চেয়ারম্যান</p></div></div>
+        <div class="committee-card"><div class="card-header"><i class="fas fa-user-tie"></i><h3>উপ-নিৰ্বাহী পরিচালক</h3></div><div class="card-body"><h3>মুর্শালিন আহমেদ</h3><p><span class="badge">সহ-প্রতিষ্ঠাতা</span></p><p>উপ-সভাপতি</p></div></div>
+        <div class="committee-card"><div class="card-header"><i class="fas fa-laptop-code"></i><h3>আইসিটি বিভাগ</h3></div><div class="card-body"><h3>(শীঘ্রই নির্বাচিত)</h3><p>অনলাইন কার্যক্রম ও প্রযুক্তি ব্যবস্থাপনা</p></div></div>
+        <div class="committee-card"><div class="card-header"><i class="fas fa-tint"></i><h3>রক্ত ব্যবস্থাপনা</h3></div><div class="card-body"><h3>(শীঘ্রই নির্বাচিত)</h3><p>রক্তদাতা সংগ্ৰহ ও সরবরাহ ব্যবস্থাপনা</p></div></div>
+        <div class="committee-card"><div class="card-header"><i class="fas fa-chart-line"></i><h3>হিসাব বিভাগ</h3></div><div class="card-body"><h3>(শীঘ্রই নির্বাচিত)</h3><p>অর্থ ব্যবস্থাপনা ও অডিট</p></div></div>
+        <div class="committee-card"><div class="card-header"><i class="fas fa-users"></i><h3>কার্যকরী পরিষদ</h3></div><div class="card-body"><h3>২০২৩-২৪ সেশনের জন্য</h3><p>সভাপতি, সম্পাদক ও সদস্যবৃন্দ — শীঘ্রই ঘোষণা</p></div></div>
+    </div>
+    
+    <div class="advisory-section"><i class="fas fa-star-of-life" style="font-size:2.5rem;color:#c62828;"></i><h2 style="color:#1b5e20;margin:15px 0;">উপদেষ্টা পরিষদ</h2><p>সর্বনিম্ন ৫ জন গণ্যমান্য ব্যক্তি — শীঘ্রই নাম ঘোষণা করা হবে</p></div>
+</div>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h4>KYBDF</h4><p>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</p></div><div><h4>যোগাযোগ</h4><p>📞 ০১৭৩৬-৫৬৭৬২০<br>✉️ kalmakandaybf@gmail.com</p></div><div><h4>ঠিকানা</h4><p>কলমাকান্দা সদর, নেত্রকোণা</p></div></div><div class="copyright"><p>&copy; ২০২৩ KYBDF</p></div></div></footer>
+
+<script>document.querySelector('.hamburger')?.addEventListener('click',function(){document.querySelector('.nav-menu')?.classList.toggle('show');});</script>
+</body>
+</html>

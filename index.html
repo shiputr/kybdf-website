@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYBDF | কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Noto Sans Bengali', sans-serif;
+            background: #f0f7f0;
+            color: #1a3a1a;
+        }
+
+        /* ================= CONTAINER ================= */
+        .container {
+            width: 100%;
+            max-width: 1250px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* ================= HEADER ================= */
+        .main-header {
+            background: linear-gradient(135deg, #c62828, #1b5e20);
+            padding: 18px 0;
+            border-bottom: 4px solid rgba(255,255,255,0.15);
+            box-shadow: 0 3px 18px rgba(0,0,0,0.18);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Left */
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        /* Logo */
+        .logo-box img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: white;
+            border: 3px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Name */
+        .brand-text h1 {
+            color: white;
+            font-size: 1.7rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .brand-text p {
+            color: #f5f5f5;
+            margin-top: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+        }
+
+        /* Right */
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Language Button */
+        .lang-btn {
+            border: none;
+            background: white;
+            color: #1b5e20;
+            padding: 10px 18px;
+            border-radius: 40px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: #ffe082;
+        }
+
+        /* Icons */
+        .header-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .header-icons a:hover {
+            background: white;
+            color: #c62828;
+        }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+            background: #145214;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+
+        /* Menu */
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 40px;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu .active {
+            background: #c62828;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            padding: 60px 20px;
+        }
+
+        .hero-box {
+            background: linear-gradient(135deg, #ffdede, #ddf5dd);
+            padding: 60px 30px;
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #1b5e20;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero h2 span {
+            color: #c62828;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #2d5a2d;
+            max-width: 800px;
+            margin: auto;
+            margin-bottom: 35px;
+        }
+
+        /* Buttons */
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 14px 30px;
+            border-radius: 40px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #c62828;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #a91f1f;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid #1b5e20;
+            color: #1b5e20;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #1b5e20;
+            color: white;
+        }
+
+        /* ================= STATS SECTION ================= */
+        .stats-section {
+            padding: 40px 0;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .stat-card {
+            flex: 1;
+            min-width: 180px;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card i {
+            font-size: 2.8rem;
+            color: #c62828;
+        }
+
+        .stat-card h2 {
+            font-size: 2.2rem;
+            color: #1b5e20;
+            margin: 12px 0;
+        }
+
+        /* ================= EMERGENCY FORM ================= */
+        .emergency-section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1b5e20;
+            margin-bottom: 35px;
+        }
+
+        .form-container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: white;
+            padding: 35px;
+            border-radius: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 20px;
+            border: 2px solid #e0e8e0;
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #c62828;
+            outline: none;
+        }
+
+        .btn-block {
+            width: 100%;
+            background: #c62828;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-block:hover {
+            background: #a91f1f;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+            background: #0e2a0e;
+            color: #d4e8d4;
+            padding: 50px 0 25px;
+            margin-top: 50px;
+            border-radius: 40px 40px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 35px;
+            margin-bottom: 30px;
+        }
+
+        .footer h4 {
+            color: #ffcd4a;
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+        }
+
+        .footer a {
+            color: #d4e8d4;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a5a2a;
+            font-size: 0.8rem;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            .header-flex {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .brand-text h1 {
+                font-size: 1.2rem;
+            }
+            .brand-text p {
+                font-size: 0.7rem;
+            }
+            .logo-box img {
+                width: 55px;
+                height: 55px;
+            }
+            .header-right {
+                width: 100%;
+                justify-content: space-between;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-flex {
+                justify-content: space-between;
+            }
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 15px;
+            }
+            .nav-menu.show {
+                display: flex;
+            }
+            .hero h2 {
+                font-size: 1.6rem;
+            }
+            .hero-box {
+                padding: 40px 20px;
+            }
+            .stats-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="main-header">
+    <div class="container header-flex">
+        <div class="brand-section">
+            <div class="logo-box">
+                <!-- এখানে আপনার লোগোর ছবি বসবে -->
+                <img src="images/logo.png" alt="KYBDF Logo">
+            </div>
+            <div class="brand-text">
+                <h1>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1>
+                <p>Kalmakanda Youth Blood Donate Foundation (KYBDF)</p>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="lang-btn" id="langBtn">
+                <i class="fas fa-language"></i> বাংলা | English
+            </button>
+            <div class="header-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/8801736567620" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="active">হোম</a></li>
+            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="goals.html">লক্ষ্য ও উদ্দেশ্য</a></li>
+            <li><a href="committee.html">কমিটি</a></li>
+            <li><a href="member-form.html">সদস্য ফরম</a></li>
+            <li><a href="blood-section.html">রক্তদান</a></li>
+            <li><a href="notice-board.html">নোটিশ</a></li>
+            <li><a href="gallery.html">গ্যালারি</a></li>
+            <li><a href="contact.html">যোগাযোগ</a></li>
+            <li><a href="donation.html">ডোনেশন</a></li>
+            <li><a href="admin.html">অ্যাডমিন</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="container hero-box">
+        <h2><span>রক্তদানে এগিয়ে আসুন</span><br>মাদককে না বলুন</h2>
+        <p>এক ফোঁটা রক্ত বাঁচাতে পারে একটি জীবন। মানবতার সেবায় কাজ করছে কলমাকান্দা যুব রক্তদান ফাউন্ডেশন।</p>
+        <div class="hero-buttons">
+            <a href="blood-section.html" class="btn btn-primary"><i class="fas fa-tint"></i> রক্তদাতা হোন</a>
+            <a href="donation.html" class="btn btn-outline"><i class="fas fa-hand-holding-heart"></i> ডোনেশন করুন</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= STATS SECTION ================= -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card"><i class="fas fa-tint"></i><h2>২৫০+</h2><p>সক্রিয় রক্তদাতা</p></div>
+            <div class="stat-card"><i class="fas fa-heartbeat"></i><h2>১২০+</h2><p>জীবন বাঁচিয়েছে</p></div>
+            <div class="stat-card"><i class="fas fa-users"></i><h2>৩০০+</h2><p>সদস্য</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= EMERGENCY FORM ================= -->
+<section class="emergency-section">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-ambulance"></i> জরুরি রক্ত প্রয়োজন?</h2>
+        <div class="form-container">
+            <form id="emergencyForm">
+                <div class="form-group"><input type="text" placeholder="রোগীর পুরো নাম" required></div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">রক্তের গ্রুপ নির্বাচন করুন</option>
+                        <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                        <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+                    </select>
+                </div>
+                <div class="form-group"><input type="text" placeholder="হাসপাতালের নাম ও ঠিকানা" required></div>
+                <div class="form-group"><input type="tel" placeholder="আপনার মোবাইল নম্বর" required></div>
+                <button type="submit" class="btn-block"><i class="fas fa-hand-holding-heart"></i> জরুরি রক্ত চাই →</button>
+            </form>
+            <div id="emergencyMsg" style="margin-top: 20px; text-align: center;"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div><h4><i class="fas fa-heart"></i> KYBDF</h4><p>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন<br>অরাজনৈতিক, অলাভজনক, মানবিক</p></div>
+            <div><h4><i class="fas fa-phone-alt"></i> যোগাযোগ</h4><p>📞 ০১৭৩৬-৫৬৭৬২০</p><p>✉️ kalmakandaybf@gmail.com</p><p><i class="fab fa-whatsapp"></i> WhatsApp: ০১৭৩৬-৫৬৭৬২০</p></div>
+            <div><h4><i class="fas fa-map-marker-alt"></i> ঠিকানা</h4><p>প্রধান কার্যালয়: কলমাকান্দা উপজেলা সদর, নেত্রকোণা</p></div>
+        </div>
+        <div class="copyright"><p>&copy; ২০২৩ কলমাকান্দা যুব রক্তদান ফাউন্ডেশন — মানবতার জয় হোক</p></div>
+    </div>
+</footer>
+
+<script>
+    // মোবাইল মেনু টগল
+    document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('navMenu').classList.toggle('show');
+    });
+
+    // জরুরি ফর্ম সাবমিট
+    document.getElementById('emergencyForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        let msgDiv = document.getElementById('emergencyMsg');
+        msgDiv.innerHTML = '<span style="background:#d4edda; color:#155724; padding:12px 20px; border-radius:40px; display:inline-block;">✅ আপনার অনুরোধ গ্রহণ করা হয়েছে। আমাদের সমন্বয়কারী শীঘ্রই যোগাযোগ করবেন।</span>';
+        this.reset();
+        setTimeout(() => msgDiv.innerHTML = '', 5000);
+    });
+
+    // ভাষা পরিবর্তন বাটন (ইংরেজি/বাংলা টগল - ডেমো)
+    document.getElementById('langBtn').addEventListener('click', function() {
+        let currentLang = this.innerText.includes('English') ? 'bn' : 'en';
+        if (currentLang === 'en') {
+            this.innerHTML = '<i class="fas fa-language"></i> বাংলা | English';
+            alert('বাংলা মোডে সুইচ করা হয়েছে।');
+        } else {
+            this.innerHTML = '<i class="fas fa-language"></i> Bangla | English';
+            alert('Switched to English mode.');
+        }
+    });
+</script>
+
+</body>
+</html>

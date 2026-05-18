@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>নোটিশ বোর্ড - KYBDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Poppins','Noto Sans Bengali',sans-serif;background:#f0f2f5;}
+        .container{max-width:1250px;margin:auto;padding:0 20px;}
+        
+        .main-header{background:linear-gradient(135deg,#c62828,#1b5e20);padding:18px 0;}
+        .header-flex{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+        .brand-section{display:flex;align-items:center;gap:18px;}
+        .logo-box img{width:75px;height:75px;border-radius:50%;background:white;border:3px solid white;}
+        .brand-text h1{color:white;font-size:1.7rem;}
+        .brand-text p{color:#f5f5f5;font-size:0.85rem;margin-top:6px;}
+        .header-right{display:flex;align-items:center;gap:15px;}
+        .lang-btn{background:white;color:#1b5e20;padding:10px 18px;border-radius:40px;border:none;font-weight:700;cursor:pointer;}
+        .header-icons a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.15);color:white;display:flex;align-items:center;justify-content:center;text-decoration:none;}
+        .navbar{background:#145214;position:sticky;top:0;}
+        .nav-flex{display:flex;justify-content:space-between;align-items:center;padding:12px 0;}
+        .nav-menu{list-style:none;display:flex;gap:8px;flex-wrap:wrap;}
+        .nav-menu a{text-decoration:none;color:white;font-size:0.9rem;font-weight:600;padding:10px 18px;border-radius:40px;}
+        .nav-menu a:hover,.nav-menu .active{background:#c62828;}
+        .hamburger{display:none;font-size:28px;color:white;cursor:pointer;}
+        
+        .notice-header{background:#1b5e20;color:white;padding:50px 0;text-align:center;}
+        .notice-header h1{font-size:2.5rem;}
+        
+        .notice-board{background:white;border-radius:40px;padding:40px;margin:50px 0;box-shadow:0 10px 25px rgba(0,0,0,0.05);}
+        .notice-item{display:flex;align-items:center;gap:20px;padding:20px;border-bottom:1px solid #e0e8e0;transition:0.2s;}
+        .notice-item:hover{background:#fef7e6;border-radius:20px;}
+        .notice-icon{width:50px;height:50px;background:#c62828;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;}
+        .notice-content{flex:1;}
+        .notice-date{color:#c62828;font-size:0.8rem;font-weight:600;}
+        .notice-title{font-size:1rem;font-weight:600;margin:5px 0;}
+        
+        .admin-notice{background:#fff9e8;border-radius:40px;padding:30px;margin:30px 0;}
+        .admin-notice h3{color:#1b5e20;margin-bottom:20px;}
+        .admin-notice textarea{width:100%;padding:15px;border:2px solid #e0e8e0;border-radius:25px;font-family:inherit;}
+        .admin-btn{background:#c62828;color:white;padding:12px 25px;border:none;border-radius:40px;margin-top:15px;cursor:pointer;}
+        
+        .footer{background:#0e2a0e;color:#d4e8d4;padding:50px 0 25px;margin-top:50px;border-radius:40px 40px 0 0;}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:35px;}
+        .footer h4{color:#ffcd4a;}
+        .copyright{text-align:center;padding-top:20px;border-top:1px solid #2a5a2a;margin-top:30px;}
+        
+        @media (max-width:768px){
+            .brand-text h1{font-size:1.2rem;}
+            .logo-box img{width:55px;height:55px;}
+            .hamburger{display:block;}
+            .nav-menu{display:none;flex-direction:column;width:100%;}
+            .nav-menu.show{display:flex;}
+            .notice-item{flex-direction:column;text-align:center;}
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header"><div class="container header-flex"><div class="brand-section"><div class="logo-box"><img src="images/logo.png" alt="Logo"></div><div class="brand-text"><h1>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1><p>Kalmakanda Youth Blood Donate Foundation (KYBDF)</p></div></div><div class="header-right"><button class="lang-btn"><i class="fas fa-language"></i> বাংলা | English</button><div class="header-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fas fa-search"></i></a></div></div></div></header>
+
+<nav class="navbar"><div class="container nav-flex"><div class="hamburger"><i class="fas fa-bars"></i></div><ul class="nav-menu"><li><a href="index.html">হোম</a></li><li><a href="about.html">আমাদের সম্পর্কে</a></li><li><a href="goals.html">লক্ষ্য ও উদ্দেশ্য</a></li><li><a href="committee.html">কমিটি</a></li><li><a href="member-form.html">সদস্য ফরম</a></li><li><a href="blood-section.html">রক্তদান</a></li><li><a href="notice-board.html" class="active">নোটিশ</a></li><li><a href="gallery.html">গ্যালারি</a></li><li><a href="contact.html">যোগাযোগ</a></li><li><a href="donation.html">ডোনেশন</a></li><li><a href="admin.html">অ্যাডমিন</a></li></ul></div></nav>
+
+<div class="notice-header"><div class="container"><h1><i class="fas fa-bullhorn"></i> নোটিশ বোর্ড</h1><p>সকল সদস্যের জন্য গুরুত্বপূর্ণ ঘোষণা</p></div></div>
+
+<div class="container">
+    <div class="notice-board" id="noticeBoard">
+        <div class="notice-item"><div class="notice-icon"><i class="fas fa-bullhorn"></i></div><div class="notice-content"><div class="notice-date">১০ মে, ২০২৫</div><div class="notice-title">রক্তদান শিবির অনুষ্ঠিত হবে</div><p>কলমাকান্দা সদর হাসপাতালে সকাল ১০টা থেকে বিকাল ৪টা পর্যন্ত। সবাইকে এগিয়ে আসার অনুরোধ।</p></div></div>
+        <div class="notice-item"><div class="notice-icon"><i class="fas fa-bullhorn"></i></div><div class="notice-content"><div class="notice-date">২৫ এপ্রিল, ২০২৫</div><div class="notice-title">শীতবস্ত্র বিতরণ কর্মসূচি সম্পন্ন</div><p>সফলভাবে সম্পন্ন হয়েছে। সবাইকে ধন্যবাদ।</p></div></div>
+        <div class="notice-item"><div class="notice-icon"><i class="fas fa-bullhorn"></i></div><div class="notice-content"><div class="notice-date">০১ এপ্রিল, ২০২৫</div><div class="notice-title">নতুন সদস্য গ্রহণ শুরু হয়েছে</div><p>ফর্ম পূরণ করে যুক্ত হোন।</p></div></div>
+    </div>
+    
+    <div class="admin-notice"><h3><i class="fas fa-lock"></i> অ্যাডমিন: নতুন নোটিশ পোস্ট করুন</h3><textarea id="newNotice" rows="3" placeholder="নতুন নোটিশ লিখুন..."></textarea><button class="admin-btn" onclick="addNotice()"><i class="fas fa-paper-plane"></i> পোস্ট করুন</button><div id="noticeMsg" style="margin-top:15px;"></div></div>
+</div>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h4>KYBDF</h4><p>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</p></div><div><h4>যোগাযোগ</h4><p>📞 ০১৭৩৬-৫৬৭৬২০<br>✉️ kalmakandaybf@gmail.com</p></div><div><h4>ঠিকানা</h4><p>কলমাকান্দা সদর, নেত্রকোণা</p></div></div><div class="copyright"><p>&copy; ২০২৩ KYBDF</p></div></div></footer>
+
+<script>
+    document.querySelector('.hamburger')?.addEventListener('click',function(){document.querySelector('.nav-menu')?.classList.toggle('show');});
+    function addNotice(){let txt=document.getElementById('newNotice').value;if(txt.trim()==='')return;let board=document.getElementById('noticeBoard');let today=new Date().toLocaleDateString('bn-BD');let newDiv=document.createElement('div');newDiv.className='notice-item';newDiv.innerHTML='<div class="notice-icon"><i class="fas fa-bullhorn"></i></div><div class="notice-content"><div class="notice-date">'+today+'</div><div class="notice-title">নতুন নোটিশ</div><p>'+txt+'</p></div>';board.prepend(newDiv);document.getElementById('newNotice').value='';document.getElementById('noticeMsg').innerHTML='<span style="color:green;">✅ নোটিশ পোস্ট হয়েছে!</span>';setTimeout(()=>document.getElementById('noticeMsg').innerHTML='',3000);}
+</script>
+</body>
+</html>

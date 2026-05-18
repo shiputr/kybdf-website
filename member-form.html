@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সদস্য ফরম - KYBDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Poppins','Noto Sans Bengali',sans-serif;background:linear-gradient(135deg,#e8f0e8,#d4e8d4);}
+        .container{max-width:1250px;margin:auto;padding:0 20px;}
+        
+        /* হেডার */
+        .main-header{background:linear-gradient(135deg,#c62828,#1b5e20);padding:18px 0;}
+        .header-flex{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+        .brand-section{display:flex;align-items:center;gap:18px;}
+        .logo-box img{width:75px;height:75px;border-radius:50%;background:white;border:3px solid white;}
+        .brand-text h1{color:white;font-size:1.7rem;}
+        .brand-text p{color:#f5f5f5;font-size:0.85rem;margin-top:6px;}
+        .header-right{display:flex;align-items:center;gap:15px;}
+        .lang-btn{background:white;color:#1b5e20;padding:10px 18px;border-radius:40px;border:none;font-weight:700;cursor:pointer;}
+        .header-icons a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.15);color:white;display:flex;align-items:center;justify-content:center;text-decoration:none;}
+        .navbar{background:#145214;position:sticky;top:0;z-index:999;}
+        .nav-flex{display:flex;justify-content:space-between;align-items:center;padding:12px 0;}
+        .nav-menu{list-style:none;display:flex;gap:8px;flex-wrap:wrap;}
+        .nav-menu a{text-decoration:none;color:white;font-size:0.9rem;font-weight:600;padding:10px 18px;border-radius:40px;}
+        .nav-menu a:hover,.nav-menu .active{background:#c62828;}
+        .hamburger{display:none;font-size:28px;color:white;cursor:pointer;}
+        
+        /* ফর্ম সেকশন */
+        .form-header{text-align:center;padding:50px 0 20px;}
+        .form-header h1{font-size:2.5rem;color:#1b5e20;}
+        .form-header p{color:#2d5a2d;}
+        
+        .form-wrapper{background:white;border-radius:50px;padding:45px;margin:30px 0;box-shadow:0 20px 40px rgba(0,0,0,0.1);}
+        .form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;}
+        .input-group{display:flex;flex-direction:column;}
+        .input-group label{font-weight:600;margin-bottom:8px;color:#1b5e20;}
+        .input-group input,.input-group select{ padding:14px 18px;border:2px solid #e0e8e0;border-radius:30px;font-family:inherit;font-size:1rem;}
+        .input-group input:focus,.input-group select:focus{border-color:#c62828;outline:none;}
+        .full-width{grid-column:span 2;}
+        .member-type{padding:15px;background:#fef7e6;border-radius:30px;margin:20px 0;}
+        .member-type label{margin-right:25px;}
+        .submit-btn{background:#c62828;color:white;padding:16px;border:none;border-radius:50px;font-size:1.2rem;font-weight:700;cursor:pointer;width:100%;margin-top:20px;}
+        .submit-btn:hover{background:#a91f1f;}
+        
+        .footer{background:#0e2a0e;color:#d4e8d4;padding:50px 0 25px;margin-top:50px;border-radius:40px 40px 0 0;}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:35px;}
+        .footer h4{color:#ffcd4a;}
+        .copyright{text-align:center;padding-top:20px;border-top:1px solid #2a5a2a;margin-top:30px;}
+        
+        @media (max-width:768px){
+            .brand-text h1{font-size:1.2rem;}
+            .logo-box img{width:55px;height:55px;}
+            .hamburger{display:block;}
+            .nav-menu{display:none;flex-direction:column;width:100%;}
+            .nav-menu.show{display:flex;}
+            .form-grid{grid-template-columns:1fr;}
+            .full-width{grid-column:span 1;}
+            .form-wrapper{padding:25px;}
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header"><div class="container header-flex"><div class="brand-section"><div class="logo-box"><img src="images/logo.png" alt="Logo"></div><div class="brand-text"><h1>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1><p>Kalmakanda Youth Blood Donate Foundation (KYBDF)</p></div></div><div class="header-right"><button class="lang-btn"><i class="fas fa-language"></i> বাংলা | English</button><div class="header-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fas fa-search"></i></a></div></div></div></header>
+
+<nav class="navbar"><div class="container nav-flex"><div class="hamburger"><i class="fas fa-bars"></i></div><ul class="nav-menu"><li><a href="index.html">হোম</a></li><li><a href="about.html">আমাদের সম্পর্কে</a></li><li><a href="goals.html">লক্ষ্য ও উদ্দেশ্য</a></li><li><a href="committee.html">কমিটি</a></li><li><a href="member-form.html" class="active">সদস্য ফরম</a></li><li><a href="blood-section.html">রক্তদান</a></li><li><a href="notice-board.html">নোটিশ</a></li><li><a href="gallery.html">গ্যালারি</a></li><li><a href="contact.html">যোগাযোগ</a></li><li><a href="donation.html">ডোনেশন</a></li><li><a href="admin.html">অ্যাডমিন</a></li></ul></div></nav>
+
+<div class="form-header"><div class="container"><h1><i class="fas fa-user-plus"></i> সদস্য আবেদন ফরম</h1><p>KYBDF-এর সাথে যুক্ত হতে নিচের ফর্মটি পূরণ করুন</p></div></div>
+
+<div class="container"><div class="form-wrapper"><form id="memberForm">
+    <div class="form-grid">
+        <div class="input-group"><label><i class="fas fa-user"></i> বাংলা নাম *</label><input type="text" required></div>
+        <div class="input-group"><label><i class="fas fa-user"></i> ইংরেজি নাম</label><input type="text"></div>
+        <div class="input-group"><label><i class="fas fa-father"></i> পিতার নাম *</label><input type="text" required></div>
+        <div class="input-group"><label><i class="fas fa-mother"></i> মাতার নাম *</label><input type="text" required></div>
+        <div class="input-group"><label><i class="fas fa-calendar"></i> জন্ম তারিখ *</label><input type="date" required></div>
+        <div class="input-group"><label><i class="fas fa-tint"></i> রক্তের গ্রুপ *</label><select required><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>O+</option><option>O-</option><option>AB+</option><option>AB-</option></select></div>
+        <div class="input-group"><label><i class="fas fa-phone"></i> মোবাইল নম্বর *</label><input type="tel" required></div>
+        <div class="input-group"><label><i class="fas fa-envelope"></i> ইমেইল</label><input type="email"></div>
+        <div class="input-group full-width"><label><i class="fas fa-map-marker-alt"></i> ঠিকানা *</label><textarea rows="3" style="border-radius:20px;padding:14px;border:2px solid #e0e8e0;" required></textarea></div>
+    </div>
+    <div class="member-type"><label><input type="radio" name="memberType" checked> <strong>স্থায়ী সদস্য</strong> (মাসিক ৫০ টাকা)</label><label style="margin-left:20px;"><input type="radio" name="memberType"> <strong>সাধারণ সদস্য</strong> (স্বেচ্ছায়)</label></div>
+    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> সদস্য আবেদন জমা দিন</button>
+    <div id="memberMsg" style="margin-top:20px;text-align:center;"></div>
+</form></div></div>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h4>KYBDF</h4><p>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</p></div><div><h4>যোগাযোগ</h4><p>📞 ০১৭৩৬-৫৬৭৬২০<br>✉️ kalmakandaybf@gmail.com</p></div><div><h4>ঠিকানা</h4><p>কলমাকান্দা সদর, নেত্রকোণা</p></div></div><div class="copyright"><p>&copy; ২০২৩ KYBDF</p></div></div></footer>
+
+<script>
+    document.querySelector('.hamburger')?.addEventListener('click',function(){document.querySelector('.nav-menu')?.classList.toggle('show');});
+    document.getElementById('memberForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('memberMsg').innerHTML='<span style="background:#d4edda;color:#155724;padding:12px 20px;border-radius:40px;display:inline-block;">✅ আপনার আবেদন গৃহীত হয়েছে। শীঘ্রই যোগাযোগ করা হবে।</span>';this.reset();setTimeout(()=>document.getElementById('memberMsg').innerHTML='',5000);});
+</script>
+</body>
+</html>

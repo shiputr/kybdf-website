@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>অ্যাডমিন প্যানেল - KYBDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Poppins','Noto Sans Bengali',sans-serif;background:#eef2f5;}
+        .container{max-width:1250px;margin:auto;padding:0 20px;}
+        
+        .main-header{background:linear-gradient(135deg,#c62828,#1b5e20);padding:18px 0;}
+        .header-flex{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+        .brand-section{display:flex;align-items:center;gap:18px;}
+        .logo-box img{width:75px;height:75px;border-radius:50%;background:white;border:3px solid white;}
+        .brand-text h1{color:white;font-size:1.7rem;}
+        .brand-text p{color:#f5f5f5;font-size:0.85rem;margin-top:6px;}
+        .header-right{display:flex;align-items:center;gap:15px;}
+        .lang-btn{background:white;color:#1b5e20;padding:10px 18px;border-radius:40px;border:none;font-weight:700;cursor:pointer;}
+        .header-icons a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.15);color:white;display:flex;align-items:center;justify-content:center;text-decoration:none;}
+        .navbar{background:#145214;position:sticky;top:0;}
+        .nav-flex{display:flex;justify-content:space-between;align-items:center;padding:12px 0;}
+        .nav-menu{list-style:none;display:flex;gap:8px;flex-wrap:wrap;}
+        .nav-menu a{text-decoration:none;color:white;font-size:0.9rem;font-weight:600;padding:10px 18px;border-radius:40px;}
+        .nav-menu a:hover,.nav-menu .active{background:#c62828;}
+        .hamburger{display:none;font-size:28px;color:white;cursor:pointer;}
+        
+        .admin-header{background:#1b5e20;color:white;padding:50px 0;text-align:center;}
+        .admin-header h1{font-size:2.5rem;}
+        
+        .login-box{max-width:500px;margin:60px auto;background:white;border-radius:40px;padding:40px;text-align:center;box-shadow:0 15px 35px rgba(0,0,0,0.1);}
+        .login-box input{width:100%;padding:14px 18px;margin:12px 0;border:2px solid #e0e8e0;border-radius:40px;}
+        .login-btn{background:#c62828;color:white;padding:12px;border:none;border-radius:40px;width:100%;font-weight:700;cursor:pointer;}
+        
+        .dashboard{display:none;}
+        .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin:40px 0;}
+        .stat-card{background:white;padding:25px;border-radius:30px;text-align:center;}
+        .stat-card i{font-size:2.5rem;color:#c62828;}
+        .stat-card h2{font-size:2rem;color:#1b5e20;}
+        .admin-box{background:white;border-radius:40px;padding:30px;margin:30px 0;}
+        .admin-box textarea{width:100%;padding:15px;border:2px solid #e0e8e0;border-radius:25px;}
+        .admin-btn{background:#c62828;color:white;padding:12px 25px;border:none;border-radius:40px;margin-top:15px;cursor:pointer;}
+        .notice-list{background:#f8f9fa;border-radius:30px;padding:20px;margin-top:20px;}
+        .notice-item{background:white;padding:15px;margin:10px 0;border-radius:20px;display:flex;justify-content:space-between;align-items:center;}
+        
+        .footer{background:#0e2a0e;color:#d4e8d4;padding:50px 0 25px;margin-top:50px;border-radius:40px 40px 0 0;}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:35px;}
+        .footer h4{color:#ffcd4a;}
+        .copyright{text-align:center;padding-top:20px;border-top:1px solid #2a5a2a;margin-top:30px;}
+        
+        @media (max-width:768px){
+            .brand-text h1{font-size:1.2rem;}
+            .logo-box img{width:55px;height:55px;}
+            .hamburger{display:block;}
+            .nav-menu{display:none;flex-direction:column;width:100%;}
+            .nav-menu.show{display:flex;}
+            .stats-grid{grid-template-columns:1fr;}
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header"><div class="container header-flex"><div class="brand-section"><div class="logo-box"><img src="images/logo.png" alt="Logo"></div><div class="brand-text"><h1>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1><p>Kalmakanda Youth Blood Donate Foundation (KYBDF)</p></div></div><div class="header-right"><button class="lang-btn"><i class="fas fa-language"></i> বাংলা | English</button><div class="header-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fas fa-search"></i></a></div></div></div></header>
+
+<nav class="navbar"><div class="container nav-flex"><div class="hamburger"><i class="fas fa-bars"></i></div><ul class="nav-menu"><li><a href="index.html">হোম</a></li><li><a href="about.html">আমাদের সম্পর্কে</a></li><li><a href="goals.html">লক্ষ্য ও উদ্দেশ্য</a></li><li><a href="committee.html">কমিটি</a></li><li><a href="member-form.html">সদস্য ফরম</a></li><li><a href="blood-section.html">রক্তদান</a></li><li><a href="notice-board.html">নোটিশ</a></li><li><a href="gallery.html">গ্যালারি</a></li><li><a href="contact.html">যোগাযোগ</a></li><li><a href="donation.html">ডোনেশন</a></li><li><a href="admin.html" class="active">অ্যাডমিন</a></li></ul></div></nav>
+
+<div class="admin-header"><div class="container"><h1><i class="fas fa-lock"></i> অ্যাডমিন প্যানেল</h1><p>সংগঠন পরিচালনার জন্য প্রশাসনিক ড্যাশবোর্ড</p></div></div>
+
+<div class="container">
+    <div id="loginBox" class="login-box"><i class="fas fa-user-shield" style="font-size:3rem;color:#c62828;"></i><h2 style="margin:15px 0;">অ্যাডমিন লগইন</h2><input type="text" id="adminUser" placeholder="ইউজারনেম"><input type="password" id="adminPass" placeholder="পাসওয়ার্ড"><button class="login-btn" onclick="adminLogin()">প্রবেশ করুন</button><div id="loginError" style="color:red;margin-top:15px;"></div></div>
+    
+    <div id="dashboard" class="dashboard"><div class="stats-grid"><div class="stat-card"><i class="fas fa-users"></i><h2 id="totalMembers">৩২০</h2><p>মোট সদস্য</p></div><div class="stat-card"><i class="fas fa-tint"></i><h2 id="totalDonors">২৫০</h2><p>মোট রক্তদাতা</p></div><div class="stat-card"><i class="fas fa-bullhorn"></i><h2 id="totalNotices">০</h2><p>মোট নোটিশ</p></div></div>
+        
+        <div class="admin-box"><h3><i class="fas fa-edit"></i> নতুন নোটিশ পোস্ট করুন</h3><textarea id="newNotice" rows="3" placeholder="নতুন নোটিশ লিখুন..."></textarea><button class="admin-btn" onclick="addAdminNotice()">পোস্ট করুন</button><div id="postMsg" style="margin-top:15px;"></div></div>
+        
+        <div class="admin-box"><h3><i class="fas fa-list"></i> সকল নোটিশ</h3><div id="noticeList" class="notice-list"></div></div>
+    </div>
+</div>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h4>KYBDF</h4><p>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</p></div><div><h4>যোগাযোগ</h4><p>📞 ০১৭৩৬-৫৬৭৬২০<br>✉️ kalmakandaybf@gmail.com</p></div><div><h4>ঠিকানা</h4><p>কলমাকান্দা সদর, নেত্রকোণা</p></div></div><div class="copyright"><p>&copy; ২০২৩ KYBDF</p></div></div></footer>
+
+<script>
+    document.querySelector('.hamburger')?.addEventListener('click',function(){document.querySelector('.nav-menu')?.classList.toggle('show');});
+    function adminLogin(){let u=document.getElementById('adminUser').value;let p=document.getElementById('adminPass').value;if(u==='admin' && p==='kybdf2023'){document.getElementById('loginBox').style.display='none';document.getElementById('dashboard').style.display='block';loadNotices();}else{document.getElementById('loginError').innerHTML='ভুল ইউজারনেম বা পাসওয়ার্ড';}}
+    function loadNotices(){let notices=JSON.parse(localStorage.getItem('kybdf_notices')||'[]');let html='';notices.forEach((n,i)=>{html+=`<div class="notice-item"><span><i class="fas fa-bell"></i> ${n}</span><button onclick="deleteNotice(${i})" style="background:#c62828;color:white;border:none;padding:5px 12px;border-radius:20px;">🗑️</button></div>`;});document.getElementById('noticeList').innerHTML=html||'<p>কোনো নোটিশ নেই</p>';document.getElementById('totalNotices').innerText=notices.length;}
+    function addAdminNotice(){let txt=document.getElementById('newNotice').value;if(txt.trim()==='')return;let notices=JSON.parse(localStorage.getItem('kybdf_notices')||'[]');notices.unshift(txt);localStorage.setItem('kybdf_notices',JSON.stringify(notices));document.getElementById('newNotice').value='';loadNotices();document.getElementById('postMsg').innerHTML='<span style="color:green;">✅ নোটিশ পোস্ট হয়েছে!</span>';setTimeout(()=>document.getElementById('postMsg').innerHTML='',2000);}
+    function deleteNotice(i){let notices=JSON.parse(localStorage.getItem('kybdf_notices')||'[]');notices.splice(i,1);localStorage.setItem('kybdf_notices',JSON.stringify(notices));loadNotices();}
+</script>
+</body>
+</html>

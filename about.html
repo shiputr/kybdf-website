@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাদের সম্পর্কে - KYBDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Poppins','Noto Sans Bengali',sans-serif;background:#f5f7fc;color:#1e2f2e;}
+        .container{max-width:1250px;margin:auto;padding:0 20px;}
+        
+        /* হেডার (index.html থেকে একই) */
+        .main-header{background:linear-gradient(135deg,#c62828,#1b5e20);padding:18px 0;border-bottom:4px solid rgba(255,255,255,0.15);}
+        .header-flex{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+        .brand-section{display:flex;align-items:center;gap:18px;}
+        .logo-box img{width:75px;height:75px;border-radius:50%;object-fit:cover;background:white;border:3px solid white;}
+        .brand-text h1{color:white;font-size:1.7rem;font-weight:800;}
+        .brand-text p{color:#f5f5f5;margin-top:6px;font-size:0.85rem;}
+        .header-right{display:flex;align-items:center;gap:15px;}
+        .lang-btn{border:none;background:white;color:#1b5e20;padding:10px 18px;border-radius:40px;font-weight:700;cursor:pointer;}
+        .header-icons{display:flex;gap:10px;}
+        .header-icons a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.15);color:white;display:flex;align-items:center;justify-content:center;text-decoration:none;}
+        .header-icons a:hover{background:white;color:#c62828;}
+        
+        /* মেনুবার */
+        .navbar{background:#145214;position:sticky;top:0;z-index:999;}
+        .nav-flex{display:flex;justify-content:space-between;align-items:center;padding:12px 0;}
+        .nav-menu{list-style:none;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;}
+        .nav-menu a{text-decoration:none;color:white;font-size:0.9rem;font-weight:600;padding:10px 18px;border-radius:40px;}
+        .nav-menu a:hover,.nav-menu .active{background:#c62828;}
+        .hamburger{display:none;font-size:28px;color:white;cursor:pointer;}
+        
+        /* ===== ইউনিক ডিজাইন (আমাদের সম্পর্কে) ===== */
+        .about-hero{
+            background:linear-gradient(135deg,#e8f0fe,#d4e4fc);
+            padding:60px 0;
+            margin:30px 0;
+            border-radius:60px;
+            text-align:center;
+        }
+        .about-hero h1{font-size:2.8rem;color:#1b5e20;margin-bottom:15px;}
+        .about-hero p{font-size:1.2rem;color:#2d5a2d;max-width:700px;margin:auto;}
+        
+        .about-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:30px;
+            margin:50px 0;
+        }
+        .about-card{
+            background:white;
+            padding:35px;
+            border-radius:35px;
+            text-align:center;
+            transition:0.3s;
+            box-shadow:0 10px 25px rgba(0,0,0,0.05);
+        }
+        .about-card:hover{transform:translateY(-10px);background:#fff9e8;}
+        .about-card i{font-size:3rem;color:#c62828;margin-bottom:20px;}
+        .about-card h3{font-size:1.6rem;color:#1b5e20;margin-bottom:15px;}
+        .about-card p{color:#555;line-height:1.6;}
+        
+        .founder-section{
+            background:linear-gradient(135deg,#1b5e20,#145214);
+            padding:50px;
+            border-radius:50px;
+            color:white;
+            margin:50px 0;
+        }
+        .founder-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:30px;
+            margin-top:30px;
+        }
+        .founder-card{background:rgba(255,255,255,0.1);padding:25px;border-radius:30px;text-align:center;}
+        .founder-card i{font-size:2.5rem;margin-bottom:15px;}
+        .founder-card h4{font-size:1.3rem;margin-bottom:8px;}
+        
+        .footer{background:#0e2a0e;color:#d4e8d4;padding:50px 0 25px;margin-top:50px;border-radius:40px 40px 0 0;}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:35px;margin-bottom:30px;}
+        .footer h4{color:#ffcd4a;margin-bottom:18px;}
+        .copyright{text-align:center;padding-top:20px;border-top:1px solid #2a5a2a;}
+        
+        @media (max-width:768px){
+            .brand-text h1{font-size:1.2rem;}
+            .logo-box img{width:55px;height:55px;}
+            .hamburger{display:block;}
+            .nav-menu{display:none;flex-direction:column;width:100%;}
+            .nav-menu.show{display:flex;}
+            .about-hero h1{font-size:2rem;}
+            .founder-section{padding:30px;}
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <div class="container header-flex">
+        <div class="brand-section">
+            <div class="logo-box"><img src="images/logo.png" alt="KYBDF Logo"></div>
+            <div class="brand-text"><h1>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1><p>Kalmakanda Youth Blood Donate Foundation (KYBDF)</p></div>
+        </div>
+        <div class="header-right">
+            <button class="lang-btn"><i class="fas fa-language"></i> বাংলা | English</button>
+            <div class="header-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fas fa-search"></i></a></div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-menu">
+            <li><a href="index.html">হোম</a></li>
+            <li><a href="about.html" class="active">আমাদের সম্পর্কে</a></li>
+            <li><a href="goals.html">লক্ষ্য ও উদ্দেশ্য</a></li>
+            <li><a href="committee.html">কমিটি</a></li>
+            <li><a href="member-form.html">সদস্য ফরম</a></li>
+            <li><a href="blood-section.html">রক্তদান</a></li>
+            <li><a href="notice-board.html">নোটিশ</a></li>
+            <li><a href="gallery.html">গ্যালারি</a></li>
+            <li><a href="contact.html">যোগাযোগ</a></li>
+            <li><a href="donation.html">ডোনেশন</a></li>
+            <li><a href="admin.html">অ্যাডমিন</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="about-hero"><div class="container"><h1>আমাদের পরিচয়</h1><p>মানবতার সেবায় কলমাকান্দার যুবদের নিয়ে গঠিত একটি অরাজনৈতিক ও অলাভজনক সংগঠন</p></div></section>
+
+<div class="container">
+    <div class="about-grid">
+        <div class="about-card"><i class="fas fa-calendar-alt"></i><h3>প্রতিষ্ঠার তারিখ</h3><p>২৭ আগস্ট, ২০২৩</p></div>
+        <div class="about-card"><i class="fas fa-map-marker-alt"></i><h3>প্রধান কার্যালয়</h3><p>কলমাকান্দা উপজেলা সদর, নেত্রকোণা</p></div>
+        <div class="about-card"><i class="fas fa-tint"></i><h3>মূল স্লোগান</h3><p>"রক্তদানে এগিয়ে আসুন, মাদককে না বলুন"</p></div>
+    </div>
+    
+    <div class="founder-section"><h2 style="text-align:center;"><i class="fas fa-users"></i> প্রতিষ্ঠাতা ও মূল উদ্যোক্তা</h2>
+        <div class="founder-grid">
+            <div class="founder-card"><i class="fas fa-user-tie"></i><h4>তানভীর রহমান শিশির</h4><p>প্রধান প্রতিষ্ঠাতা</p></div>
+            <div class="founder-card"><i class="fas fa-user-tie"></i><h4>মুর্শালিন আহমেদ</h4><p>সহ-প্রতিষ্ঠাতা</p></div>
+            <div class="founder-card"><i class="fas fa-user-tie"></i><h4>হায়দার আলী (সোহেল রানা)</h4><p>সহ-প্রতিষ্ঠাতা</p></div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h4>KYBDF</h4><p>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন<br>অরাজনৈতিক, অলাভজনক, মানবিক</p></div><div><h4>যোগাযোগ</h4><p>📞 ০১৭৩৬-৫৬৭৬২০<br>✉️ kalmakandaybf@gmail.com</p></div><div><h4>ঠিকানা</h4><p>কলমাকান্দা সদর, নেত্রকোণা</p></div></div><div class="copyright"><p>&copy; ২০২৩ কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</p></div></div></footer>
+
+<script>document.querySelector('.hamburger')?.addEventListener('click',function(){document.querySelector('.nav-menu')?.classList.toggle('show');});</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>যোগাযোগ - KYBDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Poppins','Noto Sans Bengali',sans-serif;background:#f0f4f0;}
+        .container{max-width:1250px;margin:auto;padding:0 20px;}
+        
+        .main-header{background:linear-gradient(135deg,#c62828,#1b5e20);padding:18px 0;}
+        .header-flex{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+        .brand-section{display:flex;align-items:center;gap:18px;}
+        .logo-box img{width:75px;height:75px;border-radius:50%;background:white;border:3px solid white;}
+        .brand-text h1{color:white;font-size:1.7rem;}
+        .brand-text p{color:#f5f5f5;font-size:0.85rem;margin-top:6px;}
+        .header-right{display:flex;align-items:center;gap:15px;}
+        .lang-btn{background:white;color:#1b5e20;padding:10px 18px;border-radius:40px;border:none;font-weight:700;cursor:pointer;}
+        .header-icons a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.15);color:white;display:flex;align-items:center;justify-content:center;text-decoration:none;}
+        .navbar{background:#145214;position:sticky;top:0;}
+        .nav-flex{display:flex;justify-content:space-between;align-items:center;padding:12px 0;}
+        .nav-menu{list-style:none;display:flex;gap:8px;flex-wrap:wrap;}
+        .nav-menu a{text-decoration:none;color:white;font-size:0.9rem;font-weight:600;padding:10px 18px;border-radius:40px;}
+        .nav-menu a:hover,.nav-menu .active{background:#c62828;}
+        .hamburger{display:none;font-size:28px;color:white;cursor:pointer;}
+        
+        .contact-header{background:linear-gradient(135deg,#c62828,#e05555);color:white;padding:50px 0;text-align:center;}
+        .contact-header h1{font-size:2.5rem;}
+        
+        .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin:50px 0;}
+        .contact-card{background:white;border-radius:30px;padding:35px;text-align:center;transition:0.3s;}
+        .contact-card:hover{transform:translateY(-8px);box-shadow:0 15px 30px rgba(0,0,0,0.1);}
+        .contact-card i{font-size:2.5rem;color:#c62828;margin-bottom:15px;}
+        .contact-card h3{color:#1b5e20;margin-bottom:10px;}
+        
+        .message-box{background:white;border-radius:40px;padding:40px;margin:40px 0;}
+        .message-box h2{color:#1b5e20;margin-bottom:25px;text-align:center;}
+        .message-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+        .message-grid input,.message-grid textarea{width:100%;padding:14px 18px;border:2px solid #e0e8e0;border-radius:30px;font-family:inherit;}
+        .full-width{grid-column:span 2;}
+        .send-btn{background:#c62828;color:white;padding:14px;border:none;border-radius:40px;font-weight:700;cursor:pointer;width:100%;margin-top:20px;}
+        
+        .footer{background:#0e2a0e;color:#d4e8d4;padding:50px 0 25px;margin-top:50px;border-radius:40px 40px 0 0;}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:35px;}
+        .footer h4{color:#ffcd4a;}
+        .copyright{text-align:center;padding-top:20px;border-top:1px solid #2a5a2a;margin-top:30px;}
+        
+        @media (max-width:768px){
+            .brand-text h1{font-size:1.2rem;}
+            .logo-box img{width:55px;height:55px;}
+            .hamburger{display:block;}
+            .nav-menu{display:none;flex-direction:column;width:100%;}
+            .nav-menu.show{display:flex;}
+            .message-grid{grid-template-columns:1fr;}
+            .full-width{grid-column:span 1;}
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header"><div class="container header-flex"><div class="brand-section"><div class="logo-box"><img src="images/logo.png" alt="Logo"></div><div class="brand-text"><h1>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1><p>Kalmakanda Youth Blood Donate Foundation (KYBDF)</p></div></div><div class="header-right"><button class="lang-btn"><i class="fas fa-language"></i> বাংলা | English</button><div class="header-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fas fa-search"></i></a></div></div></div></header>
+
+<nav class="navbar"><div class="container nav-flex"><div class="hamburger"><i class="fas fa-bars"></i></div><ul class="nav-menu"><li><a href="index.html">হোম</a></li><li><a href="about.html">আমাদের সম্পর্কে</a></li><li><a href="goals.html">লক্ষ্য ও উদ্দেশ্য</a></li><li><a href="committee.html">কমিটি</a></li><li><a href="member-form.html">সদস্য ফরম</a></li><li><a href="blood-section.html">রক্তদান</a></li><li><a href="notice-board.html">নোটিশ</a></li><li><a href="gallery.html">গ্যালারি</a></li><li><a href="contact.html" class="active">যোগাযোগ</a></li><li><a href="donation.html">ডোনেশন</a></li><li><a href="admin.html">অ্যাডমিন</a></li></ul></div></nav>
+
+<div class="contact-header"><div class="container"><h1><i class="fas fa-address-card"></i> যোগাযোগ করুন</h1><p>যেকোনো প্রয়োজনে আমাদের সাথে যোগাযোগ করুন</p></div></div>
+
+<div class="container">
+    <div class="contact-grid">
+        <div class="contact-card"><i class="fas fa-phone-alt"></i><h3>ফোন</h3><p>০১৭৩৬-৫৬৭৬২০</p><p>হোয়াটসঅ্যাপ: ০১৭৩৬-৫৬৭৬২০</p></div>
+        <div class="contact-card"><i class="fas fa-envelope"></i><h3>ইমেইল</h3><p>kalmakandaybf@gmail.com</p></div>
+        <div class="contact-card"><i class="fas fa-map-marker-alt"></i><h3>ঠিকানা</h3><p>প্রধান কার্যালয়: কলমাকান্দা উপজেলা সদর, নেত্রকোণা</p></div>
+    </div>
+    
+    <div class="message-box"><h2><i class="fas fa-paper-plane"></i> সরাসরি বার্তা পাঠান</h2>
+        <form id="contactForm"><div class="message-grid"><input type="text" placeholder="আপনার নাম" required><input type="email" placeholder="আপনার ইমেইল" required><input type="tel" placeholder="মোবাইল নম্বর" required class="full-width"><textarea rows="4" placeholder="আপনার বার্তা..." required class="full-width"></textarea></div>
+        <button type="submit" class="send-btn"><i class="fas fa-paper-plane"></i> বার্তা পাঠান</button>
+        <div id="contactMsg" style="margin-top:20px;text-align:center;"></div>
+        </form>
+    </div>
+</div>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h4>KYBDF</h4><p>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</p></div><div><h4>যোগাযোগ</h4><p>📞 ০১৭৩৬-৫৬৭৬২০<br>✉️ kalmakandaybf@gmail.com</p></div><div><h4>ঠিকানা</h4><p>কলমাকান্দা সদর, নেত্রকোণা</p></div></div><div class="copyright"><p>&copy; ২০২৩ KYBDF</p></div></div></footer>
+
+<script>
+    document.querySelector('.hamburger')?.addEventListener('click',function(){document.querySelector('.nav-menu')?.classList.toggle('show');});
+    document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('contactMsg').innerHTML='<span style="background:#d4edda;color:#155724;padding:12px 20px;border-radius:40px;display:inline-block;">✅ আপনার বার্তা পাঠানো হয়েছে। আমরা শীঘ্রই যোগাযোগ করব।</span>';this.reset();setTimeout(()=>document.getElementById('contactMsg').innerHTML='',5000);});
+</script>
+</body>
+</html>
